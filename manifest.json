@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "main.user.js" ],
+        "matches":          [   "https://myshows.me/view/episode/*",
+                                "https://www.kinopoisk.ru/film/*"
+                            ],
+        "run_at": "document_end"
+    } ],
+    "converted_from_user_script": true,
+    "description":  "Добавляет на некоторые сайты ссылки на торренты и субтитры.",
+    "name":         "Torrents and Subtitles",
+    "version":      "1.0",
+    "icons": { "128": "icon-128.png"}
+}
