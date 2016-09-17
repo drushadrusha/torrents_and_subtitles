@@ -3,3 +3,4 @@
 Поддерживаемые сайты:
 
  * myshows.me
+ * kinopoisk.ru
