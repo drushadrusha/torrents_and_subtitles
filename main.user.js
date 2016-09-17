@@ -4,7 +4,8 @@
 // @version      1.0
 // @description  ...
 // @author       drushadrusha
-// @match        https://myshows.me/*
+// @match        https://myshows.me/view/episode/*
+// @match        https://www.kinopoisk.ru/film/*
 // @grant        none
 // ==/UserScript==
 
@@ -34,6 +35,23 @@
                 addThisShare[0].innerHTML += '<br><a href="https://thepiratebay.org/search/'+seasonConstruction+'"><h2>Найти на The Pirate Bay</h2></a><a href="http://www.addic7ed.com/search.php?search='+seasonConstruction+'"><h2>Найти субтитры</h2></a>';
             }
          }
+    }
+
+    if(window.location.hostname == "www.kinopoisk.ru"){
+        var els = document.getElementsByTagName('span'), i = 0, movieName;
+
+        for(i; i < els.length; i++) {
+            prop = els[i].getAttribute('itemprop');
+            if(prop == "alternativeHeadline") {
+                movieName = els[i].innerHTML;
+                break;
+            }
+        }
+
+        var pageElement = document.getElementById("infoTable");
+        var linkHtml = '<a href="https://thepiratebay.org/search/'+movieName+'"><h3>Найти на The Pirate Bay</a> | <a href="http://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-'+movieName+'">Найти субтитры</h3></a>';
+        pageElement.innerHTML += linkHtml;
+
     }
 
 })(window);
