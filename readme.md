@@ -4,3 +4,6 @@ Chrome-расширение, которое добавляет ссылки на
 
  * myshows.me
  * kinopoisk.ru
+
+ Готовые сборки в /builds
+ Код в /extension 
