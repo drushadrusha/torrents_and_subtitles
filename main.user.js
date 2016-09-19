@@ -48,8 +48,8 @@
             }
         }
 
-        var pageElement = document.getElementById("infoTable");
-        var linkHtml = '<a href="https://thepiratebay.org/search/'+movieName+'"><h3>Найти на The Pirate Bay</a> | <a href="http://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-'+movieName+'">Найти субтитры</h3></a>';
+        var pageElement = document.getElementById("actorList");
+        var linkHtml = '<a href="https://thepiratebay.org/search/'+movieName+'"><h3>Найти на The Pirate Bay</a><br><a href="http://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-'+movieName+'">Найти субтитры</h3></a>';
         pageElement.innerHTML += linkHtml;
 
     }
