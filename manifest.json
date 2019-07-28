@@ -12,6 +12,6 @@
     "converted_from_user_script": true,
     "description":  "Добавляет на некоторые сайты ссылки на торренты и субтитры.",
     "name":         "Torrents and Subtitles",
-    "version":      "1.0",
+    "version":      "1.1",
     "icons": { "128": "icon-128.png"}
 }

@@ -1,11 +1,10 @@
 # Torrents and Subtitles
 
-Chrome-расширение, которое добавляет ссылки на поиск по торрент-треккерам и базам субтитров на некоторых сайтах.
+Расширение для Chrome, которое добавляет ссылки на The Pirate Bay, Addic7ed, OpenSubtitles и Tunefind.
 
-![Screenshot](https://s9.postimg.org/m3ghknccf/image.png)
+![Screenshot](https://user-images.githubusercontent.com/1893851/62013800-8bcf1980-b1a0-11e9-9296-5c9f99daeda5.png)
 
 Поддерживаемые сайты:
 
- * myshows.me
- * kinopoisk.ru
-
+ * [MyShows](https://myshows.me)
+ * [Кинопоиск](https://kinopoisk.ru)

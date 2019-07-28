@@ -1,7 +1,7 @@
-// ==UserScript==
+	// ==UserScript==
 // @name         Torrent and Subtitles
 // @namespace    https://github.com/drushadrusha
-// @version      1.0
+// @version      1.1
 // @description  ...
 // @author       drushadrusha
 // @match        https://myshows.me/view/episode/*
@@ -31,11 +31,11 @@
                     seasonNumber = "0"+seasonNumber;
                 }
 
-                var subtitlesLink = '<a href="http://www.addic7ed.com/search.php?search='+seriesName+" S"+seasonNumber+"E"+episodeNumber+'"><h2>Найти субтитры</h2></a>';
-                var tpbLink = '<a href="https://thepiratebay.org/search/'+tpbSeriesName+" S"+seasonNumber+"E"+episodeNumber+'"><h2>Найти на The Pirate Bay</h2></a>';
-                // var tunefindLink = '<a href="http://www.tunefind.com/show/'+seriesName+'"><h2>Саундтрек</h2></a>';
-                var addThisShare = document.getElementsByClassName("addThisShare");
-                addThisShare[0].innerHTML += tpbLink+subtitlesLink;
+                var subtitlesLink = '<a href="http://www.addic7ed.com/search.php?search='+seriesName+" S"+seasonNumber+"E"+episodeNumber+'">Найти субтитры</a><br>';
+                var tpbLink = '<br><a href="https://thepiratebay.org/search/'+tpbSeriesName+" S"+seasonNumber+"E"+episodeNumber+'">Найти на The Pirate Bay</a><br>';
+                var tunefindLink = '<a href="http://www.tunefind.com/search/site?q='+seriesName+'">Найти саундтрек на TuneFind</a>';
+                var addThisShare = document.getElementsByClassName("presentBlock");
+                addThisShare[0].innerHTML += tpbLink+subtitlesLink+tunefindLink;
             }
          }
     }
@@ -54,9 +54,10 @@
         var tpbMovieName = movieName.split("'").join("");
 
         var pageElement = document.getElementById("actorList");
-        var tpbLink = '<a href="https://thepiratebay.org/search/'+tpbMovieName+'"><h3>Найти на The Pirate Bay</a><br>';
-        var subtitlesLink = '<a href="http://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-'+movieName+'">Найти субтитры</h3></a>';
-        pageElement.innerHTML += tpbLink+subtitlesLink;
+        var tpbLink = '<a href="https://thepiratebay.org/search/'+tpbMovieName+'">Найти на The Pirate Bay</a><br>';
+        var subtitlesLink = '<a href="http://www.opensubtitles.org/en/search2/sublanguageid-all/moviename-'+movieName+'">Найти субтитры</a><br>';
+        var tunefindLink = '<a href="http://www.tunefind.com/search/site?q='+movieName+'">Найти саундтрек на TuneFind</a>';
+        pageElement.innerHTML += tpbLink+subtitlesLink+tunefindLink;
 
     }
 
